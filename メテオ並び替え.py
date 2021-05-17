@@ -12,11 +12,11 @@ def swap_image(new_img,x,y,img,box):
 	return new_img
 
 #メイン処理
-def main(img_path,json_path):
+def main(img_path,json_path,file_dir):
 	#ファイル名称設定
 	file_name = os.path.basename(img_path)
 	split_name = os.path.splitext(file_name)[0]
-	file_dir = os.path.dirname(img_path)
+	#file_dir = os.path.dirname(img_path)
 	
 	#画像準備
 	img_org = Image.open(img_path)
@@ -49,7 +49,7 @@ def main(img_path,json_path):
 	
 		#保存
 		img.show()
-		img.save(out_path,quality=95)
+		img.save(out_path,quality=85)
 		print(out_path)
 
 	print(file_dir)

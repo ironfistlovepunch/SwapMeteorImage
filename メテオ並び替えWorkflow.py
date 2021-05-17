@@ -31,6 +31,7 @@ print(len(sys.argv))
 if len(sys.argv) == 3:
 	image = sys.argv[1]
 	json = sys.argv[2]
+	work_path = 
 else:
 	#テスト用
 	image = "0003.jpg"
@@ -44,9 +45,11 @@ image_path = get_file_path(image,"jpg")
 print(image_path)
 json_path = get_file_path(json,"json")
 print(json_path)
+file_dir = os.path.dirname(image)
+print(file_dir)
 
 #呼ぶ
-メテオ並び替え.main(image_path,json_path)
+メテオ並び替え.main(image_path,json_path,file_dir)
 
 #戻る
 webbrowser.open("workflow://")
