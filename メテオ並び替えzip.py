@@ -58,7 +58,6 @@ if __name__ == "__main__":
 	if len(sys.argv) == 1:
 		originalfiles = os.path.abspath("originalfiles.zip")
 	else:
-		#originalfiles = sys.args[1]
-		pass
+		originalfiles = sys.argv[1]
 
 	main(originalfiles)
