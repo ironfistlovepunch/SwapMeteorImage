@@ -31,7 +31,7 @@ print(len(sys.argv))
 if len(sys.argv) == 3:
 	image = sys.argv[1]
 	json = sys.argv[2]
-	work_path = 
+	#work_path = 
 else:
 	#テスト用
 	image = "0003.jpg"
