@@ -5,7 +5,7 @@ import os
 import unicodedata
 import datetime
 import zipfile
-
+import shutil
 
 #unicode正規化対策
 name = "メテオ並び替え"
@@ -33,6 +33,8 @@ def main(zip_name):
 	source = os.path.join(temp,"source")
 	#出力フォルダ
 	out_dir = os.path.join(temp,"c")
+	#出力ファイルの圧縮名
+	out_zip = os.path.join(zip_dir,"c")
 
 	#フォルダ作成
 	os.makedirs(out_dir)
@@ -51,6 +53,9 @@ def main(zip_name):
 		jpg_name = os.path.join(source,jpg)
 		json_name = os.path.join(source,json_list[i])
 		メテオ並び替え.main(jpg_name,json_name,out_dir)
+	
+	#圧縮
+	shutil.make_archive(out_zip,"zip",out_dir)
 
 #プログラム実行
 if __name__ == "__main__":
