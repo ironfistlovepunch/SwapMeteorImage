@@ -48,7 +48,7 @@ def main(img_path,json_path,file_dir):
 			img = swap_image(img_new,x,y,img_org,box)
 	
 		#保存
-		img.show()
+		#img.show()
 		img.save(out_path,quality=85)
 		print(out_path)
 
